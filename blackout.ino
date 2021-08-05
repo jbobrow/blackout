@@ -47,9 +47,9 @@ byte faceOffsetArray[] = { 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5 };
 #define TOGGLE_DATA 0
 struct FaceValue
 {
-  byte value : 4;
-  byte toggle : 1;
-  byte ack : 1;
+  byte value ;
+  byte toggle ;
+  byte ack ;
 };
 
 struct FaceStateComm

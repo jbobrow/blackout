@@ -126,9 +126,9 @@ TileRole tileRole = TileRole_Unassigned;
 
 struct ToolState
 {
-  byte pattern  : 4;
-  byte color    : 2;
-  byte rotation : 3;
+  byte pattern  ;
+  byte color    ;
+  byte rotation ;
 };
 
 #define TOOL_PATTERN_UNASSIGNED 0b1110    // unused pattern is our "unassigned" key value
@@ -136,7 +136,7 @@ struct ToolState
 ToolState assignedTool = { TOOL_PATTERN_UNASSIGNED, 0, 0 };
 
 // Twelve possible patterns (not including all on & all off)
-byte patterns[] =
+const byte patterns[] =
 {
   0b0000,   // 1
   0b0001,   // 2
@@ -249,7 +249,7 @@ AnimCommand animSequences[] =
 Timer workingPulseTimer;
 
 // Rainbow order bitwise 1=b001=R, 3=b011=R+G, 2=b010=G, 6=b110=G+B, 4=b100=B, 5=b101=B+R
-byte rainbowSequence[] = { 1, 3, 2, 6, 4, 5 };
+const byte rainbowSequence[] = { 1, 3, 2, 6, 4, 5 };
 byte rainbowIndex = 0;
 
 // -------------------------------------------------------------------------------------------------
